@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="MIT Group Holdings – Global Vision. Local Impact. Lasting Legacy." />
+    <title>MIT Group Holdings</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f9f6ed',
+                            100: '#f2ecd4',
+                            200: '#e4d8aa',
+                            300: '#d7c07d',
+                            400: '#c9a664',
+                            500: '#b68f4a',
+                            600: '#a07b3f',
+                            700: '#836435',
+                            800: '#6c522d',
+                            900: '#584226',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #f5f3ec93 !important;
+        }
+
+        h1,
+        h2,
+        h3,
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .active-nav {
+            color: #111827;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .active-nav:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #b68f4a;
+        }
+
+        /* Custom animation for hero text */
+        .hero-text {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Hotel room card hover effect */
+        .room-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-700">
+    <!-- Header with scrollspy navigation -->
+    <header class="fixed w-full bg-white shadow-sm z-50 py-4 px-6 transition-all duration-300">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-xl font-bold text-gray-800">
+                <span class="text-primary-500">MIT</span> Group Holdings
+            </div>
+
+            <nav id="navbar" class="hidden md:flex space-x-8">
+                <a href="#home"
+                    class="nav-link text-gray-500 hover:text-gray-800 transition-colors duration-200">Home</a>
+                <a href="#about"
+                    class="nav-link text-gray-500 hover:text-gray-800 transition-colors duration-200">About</a>
+                <a href="#businesses"
+                    class="nav-link text-gray-500 hover:text-gray-800 transition-colors duration-200">Our Businesses</a>
+                <a href="#projects"
+                    class="nav-link text-gray-500 hover:text-gray-800 transition-colors duration-200">Projects</a>
+                <a href="#leadership"
+                    class="nav-link text-gray-500 hover:text-gray-800 transition-colors duration-200">Leadership</a>
+                <a href="#contact"
+                    class="nav-link text-gray-500 hover:text-gray-800 transition-colors duration-200">Contact</a>
+            </nav>
+
+            <button id="mobile-menu-button" class="md:hidden text-gray-600">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-6 absolute left-0 right-0 top-full shadow-md">
+            <div class="flex flex-col space-y-3">
+                <a href="#home"
+                    class="nav-link text-gray-700 hover:text-primary-600 py-2 transition-colors duration-200">Home</a>
+                <a href="#about"
+                    class="nav-link text-gray-700 hover:text-primary-600 py-2 transition-colors duration-200">About</a>
+                <a href="#businesses"
+                    class="nav-link text-gray-700 hover:text-primary-600 py-2 transition-colors duration-200">Our
+                    Businesses</a>
+                <a href="#projects"
+                    class="nav-link text-gray-700 hover:text-primary-600 py-2 transition-colors duration-200">Projects</a>
+                <a href="#leadership"
+                    class="nav-link text-gray-700 hover:text-primary-600 py-2 transition-colors duration-200">Leadership</a>
+                <a href="#contact"
+                    class="nav-link text-gray-700 hover:text-primary-600 py-2 transition-colors duration-200">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home"
+        class="relative pt-32 pb-20 md:pt-40 md:pb-32 bg-gradient-to-r from-gray-800 to-gray-900 text-white">
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+            <img src="https://plus.unsplash.com/premium_photo-1661881436846-5a0f53025711?q=80&w=2128&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Luxury hotel lobby" class="w-full h-full object-cover">
+        </div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10 hero-text">
+            <div class="md:w-2/3 lg:w-1/2">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight font-serif">
+                    Global Vision. <br>Local Impact. <br>Lasting Legacy.
+                </h1>
+                <p class="text-lg md:text-xl mb-8 text-gray-200">
+                    Investing in education, heritage, and hospitality with purpose across continents.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#about"
+                        class="bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-md font-medium transition-colors duration-300 text-center">
+                        Explore Our Work
+                    </a>
+                    <a href="#contact"
+                        class="border-2 border-white hover:bg-white hover:bg-opacity-10 text-white px-8 py-3 rounded-md font-medium transition-colors duration-300 text-center">
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-primary-500 font-medium">WHO WE ARE</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-6 font-serif">About Us</h2>
+                <div class="w-20 h-1 bg-primary-500 mx-auto"></div>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-12 items-center">
+                <div class="lg:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                        alt="MIT Group corporate building" class="rounded-lg shadow-xl w-full h-auto object-cover">
+                </div>
+                <div class="lg:w-1/2">
+                    <p class="text-lg mb-6 leading-relaxed">
+                        MIT Group Holdings is an Australian private investment group with core strengths in education,
+                        heritage property restoration, and boutique hospitality. We are the parent company of Melbourne
+                        Institute of Technology and steward a portfolio of landmark properties across Australia, Europe,
+                        and Asia.
+                    </p>
+                    <p class="text-lg mb-8 leading-relaxed">
+                        Founded in 2007, our group operates with a long-term perspective, focusing on investments that
+                        combine financial returns with meaningful social impact. Each of our businesses shares a
+                        commitment to excellence, innovation, and responsible stewardship.
+                    </p>
+                    <div class="flex space-x-4">
+                        <div class="bg-primary-50 p-4 rounded-lg">
+                            <i class="fas fa-globe-europe text-primary-600 text-2xl mb-2"></i>
+                            <h3 class="font-bold mb-1">Global Reach</h3>
+                            <p class="text-sm">Operations in 5 continents</p>
+                        </div>
+                        <div class="bg-primary-50 p-4 rounded-lg">
+                            <i class="fas fa-hand-holding-heart text-primary-600 text-2xl mb-2"></i>
+                            <h3 class="font-bold mb-1">Impact Focus</h3>
+                            <p class="text-sm">Purpose-driven investments</p>
+                        </div>
+                        <div class="bg-primary-50 p-4 rounded-lg">
+                            <i class="fas fa-chess-king text-primary-600 text-2xl mb-2"></i>
+                            <h3 class="font-bold mb-1">Heritage</h3>
+                            <p class="text-sm">Preserving cultural assets</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metrics Section -->
+    <section id="metrics" class="py-16 px-6 bg-gray-100">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-6 font-serif">Our Global Impact</h2>
+                <p class="max-w-3xl mx-auto text-gray-600">
+                    Numbers that reflect our commitment to growth, quality, and long-term value creation.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <h3 class="text-4xl font-bold text-primary-600 mb-2">17+</h3>
+                    <p class="text-gray-600 font-medium">Years of Leadership</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <h3 class="text-4xl font-bold text-primary-600 mb-2">5</h3>
+                    <p class="text-gray-600 font-medium">Countries Active</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <h3 class="text-4xl font-bold text-primary-600 mb-2">4</h3>
+                    <p class="text-gray-600 font-medium">Core Sectors</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <h3 class="text-4xl font-bold text-primary-600 mb-2">223</h3>
+                    <p class="text-gray-600 font-medium">Luxury Rooms Opening 2025</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Businesses Section -->
+    <section id="businesses" class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-primary-600 font-medium">OUR OPERATIONS</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-6 font-serif">Our Businesses</h2>
+                <div class="w-20 h-1 bg-primary-500 mx-auto mb-6"></div>
+                <p class="max-w-3xl mx-auto text-gray-600">
+                    We operate across four key sectors, each selected for their potential to deliver both financial
+                    returns and positive social impact.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div
+                    class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100">
+                    <div class="bg-primary-50 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-graduation-cap text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3 font-serif">Higher Education</h3>
+                    <p class="text-gray-600 mb-4">
+                        Melbourne Institute of Technology delivers career-focused education to international students
+                        across campuses in Australia.
+                    </p>
+                    <a href="#" class="text-primary-600 font-medium inline-flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+
+                <div
+                    class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100">
+                    <div class="bg-primary-50 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-building text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3 font-serif">Property Development</h3>
+                    <p class="text-gray-600 mb-4">
+                        Revitalizing heritage properties into mixed-use developments that respect their history while
+                        meeting modern needs.
+                    </p>
+                    <a href="#" class="text-primary-600 font-medium inline-flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+
+                <div
+                    class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100">
+                    <div class="bg-primary-50 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-hotel text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3 font-serif">Boutique Hospitality</h3>
+                    <p class="text-gray-600 mb-4">
+                        Curated hotel experiences that celebrate local culture and architecture, including our flagship
+                        223-room luxury hotel opening in 2025.
+                    </p>
+                    <a href="#" class="text-primary-600 font-medium inline-flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+
+                <div
+                    class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100">
+                    <div class="bg-primary-50 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-chess-rook text-primary-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-3 font-serif">Cultural Assets</h3>
+                    <p class="text-gray-600 mb-4">
+                        Preserving and activating culturally significant properties through adaptive reuse and community
+                        programming.
+                    </p>
+                    <a href="#" class="text-primary-600 font-medium inline-flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-primary-600 font-medium">OUR PORTFOLIO</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-6 font-serif">Featured Projects</h2>
+                <div class="w-20 h-1 bg-primary-500 mx-auto mb-6"></div>
+                <p class="max-w-3xl mx-auto text-gray-600">
+                    A selection of our current and completed developments showcasing our expertise across sectors.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div
+                    class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div class="relative overflow-hidden h-60">
+                        <img src="https://images.unsplash.com/photo-1521782462922-9318be1cfd04?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1986&q=80"
+                            alt="MIT City Campus"
+                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+                            <span class="text-white text-sm font-medium">Education</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2 font-serif">MIT City Campus Expansion</h3>
+                        <p class="text-gray-600 mb-4">
+                            State-of-the-art facilities in Sydney and Melbourne to accommodate growing student demand.
+                        </p>
+                        <a href="#" class="text-primary-600 font-medium inline-flex items-center">
+                            View Project <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div
+                    class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div class="relative overflow-hidden h-60">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                            alt="Historic hotel"
+                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+                            <span class="text-white text-sm font-medium">Hospitality</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2 font-serif">The Johnson Heritage Hotel</h3>
+                        <p class="text-gray-600 mb-4">
+                            223-room luxury hotel in a restored heritage building with modern amenities, opening 2025.
+                        </p>
+                        <a href="#" class="text-primary-600 font-medium inline-flex items-center">
+                            View Project <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div
+                    class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div class="relative overflow-hidden h-60">
+                        <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                            alt="Heritage property"
+                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+                            <span class="text-white text-sm font-medium">Heritage</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2 font-serif">Victorian Row Revitalization</h3>
+                        <p class="text-gray-600 mb-4">
+                            Adaptive reuse of six 19th century terraces into premium residential and commercial spaces.
+                        </p>
+                        <a href="#" class="text-primary-600 font-medium inline-flex items-center">
+                            View Project <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#"
+                    class="inline-flex items-center px-8 py-3 border border-primary-600 text-primary-600 font-medium rounded-md hover:bg-primary-600 hover:text-white transition-colors duration-300">
+                    View All Projects <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section id="leadership" class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-primary-600 font-medium">GUIDING THE VISION</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-6 font-serif">Our Leadership</h2>
+                <div class="w-20 h-1 bg-primary-500 mx-auto mb-6"></div>
+                <p class="max-w-3xl mx-auto text-gray-600">
+                    A team of experienced professionals guiding our strategic direction across all business units.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8 content-center">
+                <!-- Leader 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
+                    <div class="relative h-72">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+                            alt="John Smith" class="w-full h-full object-cover">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <p class="text-white text-sm">"Investing in sustainable growth opportunities that benefit
+                                all stakeholders."</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl font-serif">John Smith</h3>
+                        <p class="text-primary-600 mb-2">Founder & Executive Chairman</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-gray-400 hover:text-primary-600"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-primary-600"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Leader 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
+                    <div class="relative h-72">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                            alt="Sarah Johnson" class="w-full h-full object-cover">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <p class="text-white text-sm">"Building institutions that will stand the test of time
+                                through thoughtful stewardship."</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl font-serif">Sarah Johnson</h3>
+                        <p class="text-primary-600 mb-2">CEO, Education Division</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-gray-400 hover:text-primary-600"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-primary-600"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#"
+                    class="inline-flex items-center px-8 py-3 border border-primary-600 text-primary-600 font-medium rounded-md hover:bg-primary-600 hover:text-white transition-colors duration-300">
+                    Meet Full Leadership Team <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 bg-gray-800 text-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-primary-400 font-medium">GET IN TOUCH</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-8 font-serif">Contact Us</h2>
+                <p class="max-w-3xl mx-auto text-gray-300">
+                    Interested in learning more about our investments, properties, or education initiatives? We'd love
+                    to hear from you.
+                </p>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <div class="bg-gray-700 bg-opacity-50 rounded-xl p-8 backdrop-blur-sm">
+                        <h3 class="font-bold text-xl mb-6 font-serif">Send Us a Message</h3>
+                        <form>
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-300 text-sm mb-2">Full Name</label>
+                                <input type="text" id="name"
+                                    class="w-full bg-gray-800 bg-opacity-70 border border-gray-600 rounded-md px-4 py-3 focus:outline-none focus:ring-1 focus:ring-primary-400 focus:border-primary-400 transition-all">
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-300 text-sm mb-2">Email Address</label>
+                                <input type="email" id="email"
+                                    class="w-full bg-gray-800 bg-opacity-70 border border-gray-600 rounded-md px-4 py-3 focus:outline-none focus:ring-1 focus:ring-primary-400 focus:border-primary-400 transition-all">
+                            </div>
+                            <div class="mb-4">
+                                <label for="subject" class="block text-gray-300 text-sm mb-2">Subject</label>
+                                <select id="subject"
+                                    class="w-full bg-gray-800 bg-opacity-70 border border-gray-600 rounded-md px-4 py-3 focus:outline-none focus:ring-1 focus:ring-primary-400 focus:border-primary-400 transition-all">
+                                    <option value="">Select a topic</option>
+                                    <option value="investment">Investment Inquiries</option>
+                                    <option value="property">Property Development</option>
+                                    <option value="education">Education Programs</option>
+                                    <option value="hotel">Hotel Reservations</option>
+                                </select>
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-300 text-sm mb-2">Your Message</label>
+                                <textarea id="message" rows="4"
+                                    class="w-full bg-gray-800 bg-opacity-70 border border-gray-600 rounded-md px-4 py-3 focus:outline-none focus:ring-1 focus:ring-primary-400 focus:border-primary-400 transition-all"></textarea>
+                            </div>
+                            <button type="submit"
+                                class="w-full bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-4 rounded-md transition-colors duration-300">
+                                Send Message <i class="fas fa-paper-plane ml-2"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2">
+                    <h3 class="font-bold text-xl mb-6 font-serif">Our Locations</h3>
+
+                    <div class="space-y-8">
+                        <div class="flex items-start">
+                            <div class="bg-primary-600 bg-opacity-20 p-4 rounded-lg mr-4">
+                                <i class="fas fa-map-marker-alt text-primary-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-2 text-lg">Headquarters</h4>
+                                <p class="text-gray-300 mb-1">Level 10, 333 Collins Street</p>
+                                <p class="text-gray-300">Melbourne VIC 3000, Australia</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="bg-primary-600 bg-opacity-20 p-4 rounded-lg mr-4">
+                                <i class="fas fa-envelope text-primary-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-2 text-lg">Email Us</h4>
+                                <p class="text-gray-300 mb-1">General Inquiries: <a href="mailto:info@mitgroup.com"
+                                        class="text-primary-400 hover:underline">info@mitgroup.com</a></p>
+                                <p class="text-gray-300">Partnerships: <a href="mailto:partnerships@mitgroup.com"
+                                        class="text-primary-400 hover:underline">partnerships@mitgroup.com</a></p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="bg-primary-600 bg-opacity-20 p-4 rounded-lg mr-4">
+                                <i class="fas fa-phone-alt text-primary-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-2 text-lg">Call Us</h4>
+                                <p class="text-gray-300 mb-1">+61 3 1234 5678</p>
+                                <p class="text-gray-300">Monday–Friday, 9am–5pm AEST</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-12">
+                        <h3 class="font-bold text-xl mb-6 font-serif">Connect With Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="#"
+                                class="bg-gray-700 bg-opacity-50 w-12 h-12 rounded-full flex items-center justify-center hover:bg-primary-600 transition-colors duration-300">
+                                <i class="fab fa-linkedin-in text-xl"></i>
+                            </a>
+                            <a href="#"
+                                class="bg-gray-700 bg-opacity-50 w-12 h-12 rounded-full flex items-center justify-center hover:bg-primary-600 transition-colors duration-300">
+                                <i class="fab fa-twitter text-xl"></i>
+                            </a>
+                            <a href="#"
+                                class="bg-gray-700 bg-opacity-50 w-12 h-12 rounded-full flex items-center justify-center hover:bg-primary-600 transition-colors duration-300">
+                                <i class="fab fa-facebook-f text-xl"></i>
+                            </a>
+                            <a href="#"
+                                class="bg-gray-700 bg-opacity-50 w-12 h-12 rounded-full flex items-center justify-center hover:bg-primary-600 transition-colors duration-300">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <h3 class="text-white text-lg font-medium mb-4"><span class="text-primary-500">MIT</span> Group
+                        Holdings</h3>
+                    <p class="mb-4 text-sm leading-relaxed">
+                        Investing with purpose to create lasting impact through education, heritage, and hospitality.
+                    </p>
+                    <p class="text-sm">
+                        ABN: 12 345 678 901
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-white text-lg font-medium mb-4">Businesses</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-primary-400 transition-colors duration-200 text-sm">Melbourne
+                                Institute of Technology</a></li>
+                        <li><a href="#" class="hover:text-primary-400 transition-colors duration-200 text-sm">MIT
+                                Heritage
+                                Properties</a></li>
+                        <li><a href="#" class="hover:text-primary-400 transition-colors duration-200 text-sm">MIT
+                                Hospitality Group</a></li>
+                        <li><a href="#" class="hover:text-primary-400 transition-colors duration-200 text-sm">MIT
+                                Capital
+                                Partners</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-white text-lg font-medium mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-primary-400 transition-colors duration-200 text-sm">Annual
+                                Reports</a></li>
+                        <li><a href="#"
+                                class="hover:text-primary-400 transition-colors duration-200 text-sm">Sustainability</a>
+                        </li>
+                        <li><a href="#"
+                                class="hover:text-primary-400 transition-colors duration-200 text-sm">Careers</a>
+                        </li>
+                        <li><a href="#" class="hover:text-primary-400 transition-colors duration-200 text-sm">News &
+                                Media</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-white text-lg font-medium mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-primary-400 transition-colors duration-200 text-sm">Privacy
+                                Policy</a></li>
+                        <li><a href="#" class="hover:text-primary-400 transition-colors duration-200 text-sm">Terms of
+                                Use</a></li>
+                        <li><a href="#" class="hover:text-primary-400 transition-colors duration-200 text-sm">Cookie
+                                Policy</a></li>
+                        <li><a href="#"
+                                class="hover:text-primary-400 transition-colors duration-200 text-sm">Accessibility</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm mb-4 md:mb-0">© 2025 MIT Group Holdings Pty Ltd. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-sm hover:text-primary-400 transition-colors duration-200">Privacy</a>
+                    <a href="#" class="text-sm hover:text-primary-400 transition-colors duration-200">Terms</a>
+                    <a href="#" class="text-sm hover:text-primary-400 transition-colors duration-200">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top"
+        class="fixed bottom-6 right-6 bg-primary-600 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-primary-700">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const offset = 60;
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Scrollspy for navigation
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+
+                if (pageYOffset >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active-nav');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active-nav');
+                }
+            });
+
+            // Back to top button
+            const backToTopButton = document.getElementById('back-to-top');
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu .nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        function smoothScrollTo(targetY, duration = 500) {
+            const startY = window.scrollY;
+            const distance = targetY - startY;
+            const startTime = performance.now();
+
+            const easeInOutCubic = t =>
+                t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+
+            function animateScroll(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const easedProgress = easeInOutCubic(progress);
+
+                window.scrollTo(0, startY + distance * easedProgress);
+
+                if (progress < 1) {
+                    requestAnimationFrame(animateScroll);
+                }
+            }
+
+            requestAnimationFrame(animateScroll);
+        }
+
+
+        // Back to top functionality
+        document.getElementById('back-to-top').addEventListener('click', () => {
+            smoothScrollTo(0, 600);
+        });
+
+        // Smooth scrolling for all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const targetY = targetElement.getBoundingClientRect().top + window.scrollY - offset;
+                    smoothScrollTo(targetY, 600);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
